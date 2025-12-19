@@ -48,7 +48,7 @@ const HeroSection = () => {
           alt="Home Service Expert"
           className="
       w-full h-full
-      object-contain
+      object-cover
       scale-[1.12]
       will-change-transform
     "
