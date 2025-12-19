@@ -2,10 +2,16 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './components/pages/HomePage.jsx'
 
+
 const App = () => {
   return (
     <>
-      <div className='font-serif'>
+      <div
+        className='font-serif min-h-screen'
+        style={{
+          cursor: 'url("https://cdn.jsdelivr.net/gh/dhameliyahit/buket/images/1766134050847-cursor.png"), auto'
+        }}
+      >
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>

@@ -26,7 +26,7 @@ const Header = () => {
       <div
         className={`mx-auto max-w-7xl transition-all duration-500 rounded-4xl px-6 py-3 flex items-center justify-between ${isScrolled
           ? 'bg-black/40 backdrop-blur-2xl border border-white/10 shadow-2xl'
-          : 'bg-black/20 backdrop-blur-sm border border-white/5'
+          : 'bg-black/20 backdrop-blur-none border border-white/5'
           }`}
       >
         {/* Logo Section */}
@@ -75,11 +75,14 @@ const Header = () => {
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden lg:flex items-center gap-8">
-          <button className="text-sm cursor-pointer font-medium text-gray-200 hover:text-white transition-colors">
+        <div className="hidden lg:flex items-center gap-4">
+          {/* Sign In Button */}
+          <button className="cursor-pointer border border-stone-400 hover:bg-white/10 text-white px-8 py-3 rounded-full font-bold text-sm transition-all active:scale-95">
             Sign in
           </button>
-          <button className="bg-[#b4f481] hover:bg-[#9fe870] text-black px-8 py-3 rounded-full font-bold text-sm transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#9fe870]/20">
+
+          {/* Login Button */}
+          <button className="bg-[#b4f481] cursor-pointer hover:bg-[#9fe870] text-black px-8 py-3 rounded-full font-bold text-sm transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#9fe870]/40">
             Login
           </button>
         </div>

@@ -266,7 +266,7 @@ const HowitWorks = () => {
               variants={itemVariants}
               className="group relative bg-white rounded-2xl p-6 border border-stone-100 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              <span className="absolute -top-4 right-5 text-5xl font-black text-stone-100 group-hover:text-[#9fe870]/30 transition-colors duration-300">
+              <span className="absolute -top-4 right-5 text-5xl font-black text-stone-300 group-hover:text-[#9fe870]/70 transition-colors duration-300">
                 {step.id}
               </span>
 
@@ -361,7 +361,7 @@ const CheckoutTop = () => {
           <p className="text-xl text-gray-500 leading-relaxed mb-10 max-w-md">
             Discover top on-demand services: custom shelving, leak repair, LED retrofits, and smart thermostat installation.
           </p>
-          <button className="group relative overflow-hidden bg-black text-white px-10 py-4 rounded-full font-bold flex items-center gap-3 transition-all hover:pr-12">
+          <button className="group relative overflow-hidden bg-black text-white px-10 py-4 font-bold flex items-center gap-3 transition-all hover:pr-12">
             <span className="relative z-10">Explore Now</span>
             <HiArrowLongRight className="relative z-10 text-2xl group-hover:translate-x-2 transition-transform" />
             <div className="absolute inset-0 bg-zinc-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -370,13 +370,13 @@ const CheckoutTop = () => {
       </div>
 
       {/* Interactive Accordion Grid */}
-      <div className="flex flex-col lg:flex-row gap-4 h-[600px] w-full">
+      <div className="flex flex-col lg:flex-row gap-4 h-150 w-full">
         {services.map((service) => (
           <div
             key={service.id}
             onMouseEnter={() => setHoveredId(service.id)}
             onMouseLeave={() => setHoveredId(null)}
-            className={`relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
+            className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
               ${hoveredId === service.id ? 'flex-[3.5]' : 'flex-1'}
             `}
           >
@@ -397,14 +397,14 @@ const CheckoutTop = () => {
             {/* Content Layer */}
             <div className="absolute inset-0 p-10 flex flex-col justify-between">
               {/* Icon Badge */}
-              <div className={`w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl text-white shadow-xl transition-transform duration-500
+              <div className={`w-14 h-14  bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl text-white shadow-xl transition-transform duration-500
                 ${hoveredId === service.id ? 'scale-110 rotate-6' : 'scale-100'}`}>
                 {service.icon}
               </div>
 
               <div className="space-y-4">
                 <h3 className={`font-bold tracking-tighter text-white transition-all duration-500
-                  ${hoveredId === service.id ? 'text-4xl' : 'text-2xl lg:rotate-[-90deg] lg:origin-left lg:translate-x-8 lg:translate-y-[-20px] whitespace-nowrap'}
+                  ${hoveredId === service.id ? 'text-4xl' : 'text-2xl lg:-rotate-90 lg:origin-left lg:translate-x-8 lg:-translate-y-5 whitespace-nowrap'}
                 `}>
                   {service.title}
                 </h3>
@@ -415,7 +415,7 @@ const CheckoutTop = () => {
                   <p className="text-lg text-white/80 max-w-xs mb-6">
                     {service.description}
                   </p>
-                  <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white transition-colors">
+                  <div className="w-12 h-12 border border-white/30 flex items-center justify-center group-hover:bg-white transition-colors">
                     <FaArrowRight className="text-white group-hover:text-black transition-colors" />
                   </div>
                 </div>
@@ -433,7 +433,7 @@ const CheckoutTop = () => {
 const ServiceGallery = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 font-sans">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[450px]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-112.5">
 
         {/* Left Card: Large Feature */}
         <div className="md:col-span-2 relative group overflow-hidden rounded-3xl">
@@ -456,7 +456,7 @@ const ServiceGallery = () => {
         {/* Middle Column: Two Stacked Cards */}
         <div className="md:col-span-1 flex flex-col gap-4">
           {/* Top Middle Card */}
-          <div className="relative flex-[2] overflow-hidden rounded-3xl group">
+          <div className="relative flex-2 overflow-hidden rounded-3xl group">
             <img
               src="https://images.unsplash.com/photo-1615856210162-9ae33390b1a2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Booking service"
@@ -495,7 +495,7 @@ const ServiceGallery = () => {
             alt="Technician"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
           <div className="absolute bottom-8 left-6">
             <h3 className="text-white text-xl font-semibold leading-tight">
               Safe, Easy,<br />On-Demand
