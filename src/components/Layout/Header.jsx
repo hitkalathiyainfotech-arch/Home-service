@@ -31,8 +31,7 @@ const Header = () => {
       >
         {/* Logo Section */}
         <div className="flex items-center gap-2 text-white group cursor-pointer shrink-0">
-          <FiHome className="text-[#9fe870]" size={22} />
-          <span className="text-xl font-semibold tracking-tight">Heplyzo</span>
+          <img src='/helpyZo.png' width={150} />
         </div>
 
         {/* Floating Capsule Navigation */}
